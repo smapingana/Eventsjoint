@@ -1,6 +1,6 @@
-<!DOCTYPE html>
+ok<!DOCTYPE html>
 <html>
-<title>Events</title>
+<title>Events Book</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="http://www.w3schools.com/lib/w3.css">
 <style>
@@ -257,6 +257,8 @@ function openSection(evt, sectionName) {
   evt.currentTarget.classList.add("w3-brown");
 }
 </script>
+
+
 
 <footer class="w3-container w3-brown">
 <h5>by Events</h5>
