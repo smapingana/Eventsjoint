@@ -260,9 +260,11 @@ function openSection(evt, sectionName) {
 
 
 
+
 <footer class="w3-container w3-brown">
 <h5>by Events</h5>
 </footer>
 
 </body>
 </html>
+
