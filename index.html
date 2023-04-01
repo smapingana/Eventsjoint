@@ -1,280 +1,264 @@
-<!DOCTYPE html>
-<html>
-<title>Events Book</title>
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="http://www.w3schools.com/lib/w3.css">
-<style>
-.section {display:none;}
-</style>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <style>
+      body {
+        background-color: GhostWhite;
+        color: black;
+        font-family: sans-serif;
+        font-size: 16px;
+        margin: 1px;
+        padding: 20px;
+      }
+      
+      h1 {
+        text-align: center;
+        background: linear-gradient(to right, #009900, lime);
+        color: white;
+        padding: 4px;
+        text-decoration: none;
+      }
+
+      header h1 {
+        display: inline-block;
+        margin: 0;
+       text-align: center;
+        background: linear-gradient(to right, #009900, lime);
+        color: white;
+        padding: 4px;
+        text-decoration: none;
+      }
+
+nav {
+        display: inline-block;
+        margin-left: 20px;
+        text-decoration: none;
+      }
+
+      
+      nav a {
+        color: white;
+        font-weight: bold;
+        text-decoration: none;
+      }
+      
+      table {
+        border-collapse: collapse;
+        margin: auto;
+      }
+      
+      th {
+        background-color: #009900;
+        color: white;
+        padding: 10px;
+        text-align: left;
+      }
+      
+      td {
+        padding: 5px;
+      }
+      
+      form input[type="text"] {
+        border-radius: 5px;
+        padding: 10px;
+        margin: 5px;
+        font-size: "16px"
+      }
+      
+      nav{ 
+        display: flex;
+        justify-content: space-between; 
+        align-items: center; 
+        padding: 0px 0px;
+      } 
+
+      .dropdown-menu { 
+        position: absolute; 
+        top: 50px; 
+        left: 0; 
+        width: 150px;  
+        border: 1px solid #ddd; 
+        z-index:1; 
+        display: none; 
+        text-decoration: none; 
+        color: 
+      } 
+
+      .dropdown:hover .dropdown-menu { 
+        display: block; 
+        background-color: GhostWhite;
+      }
+
+      .dropdown-menu a { 
+        display: block; 
+        padding: 10px; 
+        color: black;
+        text-decoration: none; 
+      
+      } 
+
+      .dropdown-menu a:hover { 
+        background-color: #009900; 
+      } 
+
+      .button {
+        background-color: #009900;
+        color: white;
+        padding: 15px;
+        border: none;
+        border-radius: 5px;
+        margin: 10px;
+        cursor: pointer;
+        font: 16px;
+        color: white;
+      }
+
+      footer {
+        text-align: center;
+        background: linear-gradient(to right, #009900, lime);
+        color: white;
+        padding: 4px;
+        position: bottom;
+        bottom: 0;
+        width: 100%;
+      }
+
+
+  div p {
+    margin: 10px 0;
+    font-size:16px
+  }
+
+  div ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  div li {
+    margin: 10px 0;
+  }
+
+  div li label {
+    display: inline-block;
+    margin-left: 10px;
+  }
+
+  div input[type="text"],
+  div textarea,
+  div input[type="date"],
+  div input[type="time"] {
+    border-radius: 5px;
+    padding: 5px;
+    margin: 5px;
+    border: none;
+    border: 1px solid #ddd;
+  }
+    textarea {
+     border-radius: 5px;
+
+ </style>
+</head>
+<form>
+
 <body>
-<header class="w3-container w3-brown w3-center">
-<h2>Events</h2>
-</header>
 
-<nav class="w3-sidenav w3-khaki w3-card-4" style="width:150px">
-<div class=w3-container">
+<h1>Events Planner</h1>
 
-  <a href="#" class="tablink w3-hover-orange" onclick="openSection(event, 'To Do')">To Do</a>
-  <a href="#" class="tablink w3-hover-orange" onclick="openSection(event, 'Reservations')">Reservations</a>		
-  <a href="#" class="tablink w3-hover-orange" onclick="openSection(event, 'Guest Book')">Guest Book</a>
-  <a href="#" class="tablink w3-hover-orange" onclick="openSection(event, 'Catering')">Catering</a>	
-  <a href="#" class="tablink w3-hover-orange" onclick="openSection(event, 'Baking')">Baking</a>	
-  <a href="#" class="tablink w3-hover-orange" onclick="openSection(event, 'Equipment')">Equipment</a>
-  <a href="#" class="tablink w3-hover-orange" onclick="openSection(event, 'Decorations')">Decorations</a>
-  <a href="#" class="tablink w3-hover-orange" onclick="openSection(event, 'Florist')">Florist</a>
-  <a href="#" class="tablink w3-hover-orange" onclick="openSection(event, 'Music')">Music</a>
-  <a href="#" class="tablink w3-hover-orange" onclick="openSection(event, 'Transport')">Transport</a>
-  <a href="#" class="tablink w3-hover-orange" onclick="openSection(event, 'Accommodation')">Accommodation</a>
-  <a href="#" class="tablink w3-hover-orange" onclick="openSection(event, 'Other Fascilities')">Other Fascilities</a>
-  <a href="#" class="tablink w3-hover-orange" onclick="openSection(event, 'Cards')">Cards</a>
-</nav>
+  <h2>Event</h2>
+ <input type="text" placeholder="Type in Event Name"></p>
+  <p>Venue:</p>
+  <ul>
+    <li><label><input type="checkbox" name="venue" value="boardroom">Boardroom</label></li>
+    <li><label><input type="checkbox" name="venue" value="conference-center">Conference Center</label></li>
+    <li><label><input type="checkbox" name="venue" value="hall">Hall</label></li>
+    <li><label><input type="checkbox" name="venue" value="park">Park</label></li>
+    <li><label><input type="checkbox" name="venue" value="outdoors">Outdoors</label></li></br>
+    <li><textarea name="venue-other" rows="5" cols="30" placeholder="Describe desired Venue if not listed above"></textarea></li>
+  </ul>
+  <b><p>Date:</p></b>
+  <p>From</p> <input type="date">
+  <p>To</p> <input type="date">
+  <b><p>Time:</p></b>
+  <p>From</p> <input type="time">
+  <p>To</p>  <input type="time"></br></br>
 
-<div class="w3-container" style="margin-left:150px">
+<h2>Guest Book</h2>
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Contact Number</th>
+    <th>E-mail Address</th>
+  </tr>
+  <tr>
+    <td><input type="text" size="12px" placeholder=" Enter Name"></td>
+    <td><input type="text" size="8px" placeholder= "Phone Number"></td>
+    <td><input type="text" size="8px" placeholder="E-mail Optional"></td>
+  </tr>
+</table></br>
+  <button class="button" id="add-rows">Add Rows</button></br></br>
 
- <div id="To Do" class="w3-container section">
-  <h2>To Do</h2>
-  
-  <p>To Do:<input type="text" placeholder="To Do"></p>
-</div>
+<h2>Catering</h2>
+<p>Additional Staff: <input class="w3-check" type="checkbox"></p>
+<p>Tables Linen: <input class="w3-check" type="checkbox"></p>
+<p>Equipment:</p>
+<textarea name="equipment" rows="5" cols="30" placeholder="Tables, chairs, etc."></textarea>
+<p>Beverages:</p><textarea name="beverages" rows="5" cols="30" placeholder="Bar serves, soft drink, coffe etc."></textarea>
+<p>Other:</p> <textarea name="other" rows="5" cols="30" placeholder="Specify."></textarea>
+</br></br>
 
-  <div id="Reservations" class="w3-container section">
-  <h2>Reservations</h2>
-  
-  <p>Event: <input type="text" placeholder="Enter Event Name"></p>
-   <label class="w3-validate">Board Room:</label> <input class="w3-check" type="checkbox"><br>
-<label class="w3-validate">Conference Center:</label> <input class="w3-check" type="checkbox"><br>
-<label class="w3-validate">Hall:</label> <input class="w3-check" type="checkbox"><br>
-<label class="w3-validate">Park:</label> <input class="w3-check" type="checkbox"><br>
-<label class="w3-validate">Out Doors:</label> <input class="w3-check" type="checkbox">
- <p>Date:        <input type="text" placeholder="From"> To: <input type="text" placeholder="To"></p>
- <p>Time (From): <input type="text" placeholder="From"> To: <input type="text" placeholder="To"></p>
-<p>Other:<input type="text" placeholder="Vanue if it's none of the above"></p>
-</p>
- </div>
-  
-  <div id="Guest Book" class="w3-container section">
-    <h2>Guest Book</h2> 
-   
-<div class="w3-responsive">
-<table class="w3-table w3-striped w3-bordered w3-border">
-<tr class="w3-khaki">
-  <th>Name</th>
-  <th>Contact Number</th>
-  <th>E-mail Address</th>
-</tr>
-<tr>
-  <td><input type="text" placeholder="Enter Name"></td>
-  <td><input type="text" placeholder="Enter Contact Number"></td>
-  <td><input type="text" placeholder="E-mail Optional"></td>
-</tr>
-<tr>
-  <td><input type="text" ></td>
-  <td><input type="text"></td>
-  <td><input type="text"></td>
-</tr>
-<tr>
-  <td><input type="text"></td>
-  <td><input type="text"></td>
-  <td><input type="text"></td>
-</tr>
-<tr>
-  <td><input type="text"></td>
-  <td><input type="text"></td>
-  <td><input type="text"></td>
-</tr>
-<tr>
-  <td><input type="text"></td>
-  <td><input type="text"></td>
-  <td><input type="text"></td>
-</tr>
-<tr>
-  <td><input type="text" ></td>
-  <td><input type="text"></td>
-  <td><input type="text"></td>
-</tr>
-<tr>
-  <td><input type="text"></td>
-  <td><input type="text"></td>
-  <td><input type="text"></td>
-</tr>
-<tr>
-  <td><input type="text"></td>
-  <td><input type="text"></td>
-  <td><input type="text"></td>
-</tr>
-<tr>
-  <td><input type="text"></td>
-  <td><input type="text"></td>
-  <td><input type="text"></td>
-</tr><tr>
-  <td><input type="text"></td>
-  <td><input type="text"></td>
-  <td><input type="text"></td>
-</tr>
-<tr>
-  <td><input type="text"></td>
-  <td><input type="text"></td>
-  <td><input type="text"></td>
-</tr>
-<tr>
-  <td><input type="text"></td>
-  <td><input type="text"></td>
-  <td><input type="text"></td>
-</tr>
-<tr>
-  <td><input type="text"></td>
-  <td><input type="text"></td>
-  <td><input type="text"></td>
-</tr>
-<tr>
-  <td><input type="text"></td>
-  <td><input type="text"></td>
-  <td><input type="text"></td>
-</tr>
-</table>  
-</div> 
-  </div>
-  
-   <div id="Catering" class="w3-container section">
-   <h2>Catering</h2>
-   
-   <label class="w3-validate">Staff:</label> <input class="w3-check" type="checkbox"><br>
-<label class="w3-validate">Table Linen:</label> <input class="w3-check" type="checkbox"><br><br>
-<label class="w3-validate">Equipment:</label> <input type="text" placeholder="Table,Chairs etc"><br></br>
-<label class="w3-validate">Beverages:</label> <input type="text" placeholder="Bar servs,soft/d,coffe etc"><br></br>
-<p>Other:<input type="text" placeholder="Specify"></p>
-</div>
+<h2>Baking</h2>
+<label for="wedding-cake">Wedding Cake:</label>
+<input id="wedding-cake" type="checkbox"></br></br>
+<label for="party-cake">Party Cake:</label>
+<input id="party-cake" type="checkbox"></br></br>
+<label for="cakes">Cakes:</label>
+<input id="cakes" type="checkbox"></br></br>
+<label for="cup-cakes">Cup Cakes:</label>
+<input id="cup-cakes" type="checkbox"></br></br>
+<label class="Number of persons">Number of Persons:</label>
+<input type="text" size="4px">
+<p>Other:</p> </p><textarea name="other" rows="5" cols="30" placeholder="Specify".></textarea>
 
- <div id="Baking" class="w3-container section">
- <h2>Baking</h2>
-  
-   <label class="w3-validate">Wedding Cake:</label> <input class="w3-check" type="checkbox"><br>
-<label class="w3-validate">Party Cake:</label> <input class="w3-check" type="checkbox"><br>
-<label class="w3-validate">Cakes:</label> <input class="w3-check" type="checkbox"><br>
-<label class="w3-validate">Cup Cakes:</label> <input class="w3-check" type="checkbox"><br>
-<label class="w3-validate">Number of Persons:</label> <input type="text" placeholder="number">
-<p>Other: <input type="text" placeholder="Specify"></p>
-</div>
-
-  <div id="Equipment" class="w3-container section">
-    <h2>Equipment</h2>
-      <p>
-   <label class="w3-validate">Chairs:</label> <input class="w3-check" type="checkbox"> 
-   <label class="w3-validate">Number:</label> <input type="text" placeholder="number"><br>
-<label class="w3-validate">Cutlery:</label> <input class="w3-check" type="checkbox"><br>
-<label class="w3-validate">Tables:</label> <input class="w3-check" type="checkbox"><br>
-<label class="w3-validate">Tables Linen:</label> <input class="w3-check" type="checkbox"><br>
-<label class="w3-validate">Barbercue / Braai Stand:</label> <input class="w3-check" type="checkbox"><br>
-<label class="w3-validate">Marquee:</label> <input class="w3-check" type="checkbox"><br>
-<p>Other:</label> <input type="text" placeholder="Specify"></p>
-  </div>
-  
-    <div id="Decorations" class="w3-container section">
-    <h2>Decorations</h2>
-  
-   <label class="w3-validate">Tables Decoration:</label> <input class="w3-check" type="checkbox"><br>
-<label class="w3-validate">Theme Colours:</label> <input class="w3-check" type="checkbox"><br>
-<label class="w3-validate">Banners:</label> <input class="w3-check" type="checkbox"><br>
-<label class="w3-validate">Baloons:</label> <input class="w3-check" type="checkbox"><br>
-<p>Other:<input type="text" placeholder="Specify"></p>
-  </div>
-  
-   <div id="Florist" class="w3-container section">
-   <h2>Florist</h2>
-  
-   <label class="w3-validate">Flowers:</label> <input class="w3-check" type="checkbox"><br>
-<label class="w3-validate">Gifts:</label> <input class="w3-check" type="checkbox"><br>
-<p>Other: <input type="text" placeholder="Specify"></p>
-</div>
-  
-   <div id="Music" class="w3-container section">
-   <h2>Music</h2>
-  
-   <label class="w3-validate">DJ:</label> <input class="w3-check" type="checkbox"><br>
-<label class="w3-validate">Live Band:</label> <input class="w3-check" type="checkbox"><br>
-<label class="w3-validate">Choir:</label> <input class="w3-check" type="checkbox"><br>
-<p>Other: <input type="text" placeholder="Specify"></p>
-</div>
-  
-   <div id="Transport" class="w3-container section">
-   <h2>Transport</h2>
-  
-<p>Number of Persons: <input type="text" placeholder="Number of Persons"></p>
-<p>Date(From): <input type="text" placeholder="Enter Date"> To: <input type="text" placeholder="Enter Date"><br>
-<p>Time(From): <input type="text" placeholder="Enter Time"> Return: <input type="text" placeholder="Enter Time"><br>
-<p>Address: <input type="text" placeholder="Address"></p>
-<p>Other: <input type="text" placeholder="Specify"></p>
-</div>
-
- <div id="Accommodation" class="w3-container section">
- <h2>Accommodation</h2>
-  
-<P>Number of Persons: <input type="text" placeholder="Number of Persons"></p>
-<p>Number of Rooms: <input type="text" placeholder="Number of Rooms"></p>
-<P>Number of Beds: <input type="text" placeholder="Number of Beds"></P>
-<label class="w3-validate">Include Meals: <input class="w3-check" type="checkbox"><br>
-<p>Other: <input type="text" placeholder="Specify"></p>
-</div>
-
- <div id="Other Fascilities" class="w3-container section">
- <h2>Other Fascilities</h2>
-  
-<label class="w3-validate">Mobile Rest Rooms: </label> <input class="w3-check" type="checkbox"><br>
-<p>Number of Rest Rooms: <input type="text" placeholder="Enter Number"><br>
-<label class="w3-validate">Rest Rooms for She and He:</label><input class="w3-check" type="checkbox"><br>
-<p>Number of Rest Rooms: <input type="text" placeholder="Enter Number"><br>
-<p>Other: <input type="text" placeholder="Specify"></p>
-</div>
-
- <div id="Cards" class="w3-container section">
- <h2>Cards</h2>
- <div class="w3-card-8 w3-dark-grey w3-margin" style="width:50%">
-
-<div class="w3-container w3-center">
-  <h3>Invitation</h3>
-  <img src="img_avatar3.png" alt="Avatar" style="width:80%">
-  <input type="text" placeholder="Enter Name">
-  <p>
-    <button class="w3-btn w3-green">Confirm</button>
-    <button class="w3-btn w3-red">Can't Attend</button>
-  </p>
-</div>
-
-</div>
-
- <script>
-function openSection(evt, sectionName) {
-  var i, x, tablinks;
-  x = document.getElementsByClassName("section");
-  for (i = 0; i < x.length; i++) {
-     x[i].style.display = "none";
-  }
-  tablinks = document.getElementsByClassName("tablink");
-  for (i = 0; i < x.length; i++) {
-     tablinks[i].classList.remove("w3-brown");
-  }
-  document.getElementById(sectionName).style.display = "block";
-  evt.currentTarget.classList.add("w3-brown");
-}
-</script>
-
-<?php
-
-//Receipiant's address
-$to = "input to"
-
-//Sender's addres
-$from = "input from"
-
-$message = "check bxs"
-
-//Actual Message
-mail($to,$from,$message)
-
-
-<footer class="w3-container w3-brown">
-<h5>by Events</h5>
+<h2>Equipment</h2> 
+<label>Chairs:</label> <input type="checkbox"></br></br>
+<label>Cutlery:</label> <input type="checkbox"></br></br> <label>Tables:</label> <input type="checkbox"></br></br>
+<label>Tables Linen:</label> <input type="checkbox"></br></br> <label>Barbecue / Braai Stand:</label> <input type="checkbox"></br></br><label>Marquee:</label> <input type="checkbox"></br></br><label>Other:</label></p><textarea name="other" rows="5" cols="30" placeholder="Specify."></textarea>
+</br></br>
+<div id="Decorations" class="section"> <h2>Decorations</h2> 
+<label>Tables Decoration:</label> <input type="checkbox"></br></br><label>Theme Colours:</label> <input type="checkbox"></br></br> <label>Banners:</label> <input type="checkbox"></br></br> <label>Balloons:</label> <input type="checkbox"></br></br>
+<label>Other:</label></p><textarea name="other" rows="5" cols="30" placeholder="Specify."></textarea> </div></br>
+<h2>Florist</h2> 
+<label>Flowers:</label> <input type="checkbox"></br></br> <label>Gifts:</label> <input type="checkbox"></br></br>
+<label>Other:</label></p> <textarea name="other" rows="5" cols="30" placeholder="Specify."></textarea>
+</br></br>
+<h2>Music</h2> <label>DJ:</label> <input type="checkbox"></br></br><label>Live Band:</label> <input type="checkbox"></br></br> <label>Choir:</label> <input type="checkbox"></br></br>
+<label>Other:</p></label> <textarea name="other" rows="5" cols="30" placeholder="Specify."></textarea>
+</br></br>
+<h2>Transport</h2> <label>Number of Persons:</label> <input type="text" size="4"></br> 
+<b><p>Date:</p></b>
+<p>From</p> <input type="date"> <p>To</p> <input type="date"></br> <b><p>Time:</p></b>
+<p>Depart</p> <input type="time">  
+<p>Return</p><input type="time"></br> </br>
+<p><label>Departure Address:</label></p>
+<textarea name="other" rows="5" cols="30" placeholder="From Address."></textarea>
+</br>
+<p><label>Vanue Address:</label></p>
+<textarea name="other" rows="5" cols="30" placeholder="To Address."></textarea>
+<br>
+ <p><label>Other:</label></p>
+<textarea name="other" rows="5" cols="30" placeholder="Specify."></textarea>
+</br></br>
+ <h2>Accommodation</h2> <label>Number of Persons:</label> 
+<input type="text" size="2px">
+<br> <label>Number of Rooms:</label> <input type="text" size="2px"><br> <label>Number of Beds:</label> 
+<input type="text" size="2pz"><br>  <p><label>Other:</label></p> 
+<textarea name="other" rows="5" cols="30" placeholder="Specify."></textarea>
+</br>
+ <h2>Other Facilities</h2> <label>Mobile Rest Rooms:</label> <input type="checkbox"></br></br> <label>Number of Rest Rooms:</label> <input type="checkbox"></br></br>
+<input type="text" placeholder="E-mail Address" id="send"> <button class="button">Send</button></br>
+</form>
+<footer>
+<p>Events</p>
 </footer>
-
-</body>
-</html>
